@@ -1,0 +1,99 @@
+.aboutcard {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    max-width: 380px;
+    width: 100%;
+    height: 230px; /* Fixe la hauteur de la carte */
+    border-radius: 20px;
+    overflow: hidden; /* Pour éviter que l'image déborde */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet de carte */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation sur le survol */
+  
+    &:hover {
+      transform: translateY(-10px); /* Légère élévation de la carte */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+    }
+  
+    /* Image prend toute la carte */
+    &__image {
+      grid-area: 1 / 1 / -1 / -1; /* L'image couvre toute la grille */
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* L'image est derrière le texte */
+      overflow: hidden; /* Assure que l'image ne déborde pas */
+      transition: transform 0.3s ease; /* Animation de zoom sur l'image */
+  
+      /* Effet zoom sur l'image */
+      &:hover {
+        transform: scale(1.05); /* Zoom léger de l'image */
+      }
+    }
+  
+    &__image-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Assure que l'image couvre le conteneur sans distorsion */
+    }
+  
+    /* Overlay flou au-dessus de l'image */
+    &__overlay {
+      grid-area: 1 / 1 / -1 / -1; /* Couvre aussi toute la carte */
+      background-color: rgba(255, 255, 255, 0.5); /* Fond blanc semi-transparent */
+      backdrop-filter: blur(20px); /* Effet de flou */
+      z-index: 2; /* Le filtre est au-dessus de l'image */
+      transition: background-color 0.3s ease; /* Animation sur la couleur de l'overlay */
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7); /* Change légèrement la transparence au survol */
+      }
+    }
+  
+    /* Texte positionné au-dessus */
+    &__text {
+      grid-area: 1 / 1 / -1 / -1; /* Place le texte au-dessus de la carte */
+      display: grid;
+      grid-template-columns: repeat(19, 1fr); /* Réutilise la même grille pour le texte */
+      grid-template-rows: repeat(11, 1fr); /* Réutilise la même grille pour le texte */
+      z-index: 3; /* Le texte est au-dessus de tout */
+      color: #000;
+      opacity: 0.9; /* Légère transparence initiale du texte */
+      transition: opacity 0.3s ease; /* Animation d'opacité sur le texte */
+  
+      &:hover {
+        opacity: 1; /* Le texte devient complètement opaque au survol */
+      }
+    }
+  
+    /* Icône + */
+    &__icon {
+      grid-area: 1 / 1 / 1 / 1; /* Positionne l'icône à un endroit spécifique sur la grille */
+      z-index: 4;
+      font-size: 54px;
+      color: #FF8200; /* Couleur de l'icône */
+      padding-left: 10px;
+      transition: transform 0.3s ease; /* Animation de l'icône */
+  
+      &:hover {
+        transform: rotate(45deg); /* Fait pivoter l'icône au survol */
+      }
+    }
+  
+    h3 {
+      grid-column: 3 / 19; /* Positionne h3 selon la grille */
+      grid-row: 1 / 3;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: right; /* Aligne le texte à droite */
+    }
+  
+    p {
+      grid-column: 1 / 18; /* Positionne le paragraphe selon la grille */
+      grid-row: 7 / 12;
+      font-size: 18px;
+      line-height: 1.5;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }
+  }

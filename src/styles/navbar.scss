@@ -1,0 +1,133 @@
+@import '../styles/variables.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    margin-bottom: -20px;
+
+    // Conteneur pour le logo et les liens
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        img {
+            width: auto;
+            height: 110px;
+        }
+    }
+
+    // Liste des liens de navigation
+    &__list {
+        margin-left: 60px; // Rapproche la liste du logo
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-right: 20px;
+                font-size: 18px;
+                color: black;
+                cursor: pointer;
+                font-weight: 400;
+                position: relative;
+                transition: color 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    color: var(--orange);
+                    transform: translateY(-5px);
+                }
+            }
+
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // Contact à droite sur desktop
+    &__contact {
+        background-color: var(--orange);
+        padding: 20px;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: auto;
+
+        &:hover {
+            background-color: var(--violet);
+        }
+    }
+
+    // Styles pour le mobile
+    @media (max-width: 758px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__hamburger {
+            display: flex;
+            margin-left: auto; // Place le hamburger à droite sur mobile
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+
+            .bar {
+                height: 3px;
+                width: 100%;
+                background-color: black;
+                transition: all 0.3s ease;
+            }
+
+            &.open .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &.open .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.open .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        &__list {
+            display: none; // Cacher le menu par défaut sur mobile
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: var(--background-color);
+            padding: 20px;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &__list.open {
+            display: flex; // Afficher le menu lorsqu'il est ouvert
+        }
+
+        &__contact {
+            display: none; // Cacher le bouton contact sur mobile
+        }
+    }
+}

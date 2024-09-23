@@ -1,0 +1,10 @@
+.contact-section {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px; /* Espacement entre les colonnes */
+    max-width: 1200px;
+    margin: 0 auto; /* Centre la section */
+    margin-top: 10%;
+    padding: 20px;
+  }

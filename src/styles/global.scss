@@ -1,0 +1,19 @@
+@import '../styles/variables.scss';
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+// Appliquer la marge globale à l'ensemble du contenu
+main {
+    margin: var(--global-margin);
+}
+
+// Exclure la navbar et le footer de la marge globale
+.navbar, .footer {
+    margin: 0; // Pas de marge pour ces éléments
+    padding: 0 20px; // Si tu veux ajuster l'espacement interne pour la navbar et le footer
+}

@@ -1,0 +1,40 @@
+.cta-button {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); // 12 colonnes pour s'adapter à la grille de l'image
+  grid-template-rows: repeat(6, 1fr); // 6 lignes pour la grille
+  align-items: center; // Centrer verticalement le texte
+  justify-items: stretch; // Étendre les éléments dans la grille
+  width: 100%;
+  max-width: 225px; // Ajuster la taille max pour que le texte et l'icône tiennent sur une ligne
+  height: 70px; // Hauteur fixe pour le bouton
+  background-color: var(--orange); 
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative; // Position relative pour la gestion interne
+
+  &:hover {
+    background-color: var(--violet); // Changer de couleur au survol
+  }
+
+  &__text {
+    grid-column: 1 / 13; // Le texte prend les colonnes 2 à 11
+    grid-row: 2 / 6; // Le texte prend 4 rangées pour être centré
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px; // Espacement entre les lettres pour un look plus aéré
+  }
+
+  &__icon {
+    grid-column: 12 / 13; // L'icône prend les colonnes 11 à 12
+    grid-row: 1 / 3; // L'icône occupe les premières rangées pour être en haut à droite
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateX(5px); // Déplace légèrement la flèche au survol
+    }
+  }
+}

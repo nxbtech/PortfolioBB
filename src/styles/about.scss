@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+
+.about-section {
+  display: flex; /* On utilise flex pour contrôler l'alignement */
+  flex-direction: column; /* Permet que le titre et le contenu soient placés l'un sous l'autre */
+  justify-content: center; /* Centrer verticalement le contenu dans la section */
+  margin: auto;
+  margin-top: -5%;
+  max-width: 890%;
+  height: 100vh; /* S'assure que la section prend toute la hauteur de la page */
+
+  &__title {
+    font-size: 64px;
+    font-weight: 500;
+    max-width: 60%;
+    margin-bottom: 20px;
+    margin-left: 100px;
+  }
+
+  &__content {
+    font-size: 24px;
+    font-weight: 300;
+    width: 60%;
+    text-align: right; /* Aligne le texte à droite */
+    margin-left: auto; /* Pousse le contenu à droite */
+    margin-right: 100px;
+    margin-top: -1%;
+  }
+}

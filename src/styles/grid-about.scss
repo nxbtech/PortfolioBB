@@ -1,0 +1,7 @@
+.grid-about {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-gap: 20px; /* Espacement entre les cartes */
+    padding: 20px; /* Espacement interne */
+  }
