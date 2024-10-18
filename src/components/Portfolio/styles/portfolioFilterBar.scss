@@ -1,0 +1,40 @@
+.filter-bar {
+    text-align: center;
+    margin-bottom: 20px;
+  
+    &__buttons {
+      display: inline-flex;
+      gap: 15px;
+      justify-content: center;
+    }
+  
+    .filter-bar__button {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: #FF8200;
+      }
+  
+      &.active {
+        color: #FF8200;
+      }
+  
+      &.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #FF8200;
+      }
+    }
+  }

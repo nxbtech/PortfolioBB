@@ -5,24 +5,24 @@ const Parallax = () => {
   const imageData = [
     { 
       id: 1, 
-      src: '/images/img-nxb1.png', 
+      src: require('../components/Images/parallax.png'), 
       number: '1.', 
-      title: 'FLEXIBILITE TOTALE', 
-      text: <>On <span className="highlight">s’adapte</span> à vos besoins, à vos délais, et à votre manière de travailler, en full remote.</>
+      title: 'FLEXIBILITÉ ET AGILITÉ', 
+      text: <>Je <span className="highlight">m'adapte</span> à vos besoins et délais, en travaillant à distance pour plus de réactivité et de flexibilité.</>
     },
     { 
       id: 2, 
-      src: '/images/img-nxb8.png', 
+      src: require('../components/Images/parllax.png'), 
       number: '2.', 
-      title: 'EXECUTION PRECISE', 
-      text: <>Des conseils <span className="highlight">stratégiques</span> adaptés à vos enjeux digitaux.</>
+      title: 'EXPERTISE FULLSTACK', 
+      text: <>Des solutions en <span className="highlight">développement web</span> avec React et Node.js, ainsi qu'en gestion de projet pour optimiser vos initiatives digitales.</>
     },
     { 
       id: 3, 
-      src: '/images/nxp-img6.png', 
+      src: require('../components/Images/3D.jpg'), 
       number: '3.', 
-      title: 'PARTENAIRE DE CONFIANCE', 
-      text: <>Nous vous <span className="highlight">accompagnons</span> dans chaque étape de votre transition digitale.</>
+      title: 'PARTENAIRE TECHNIQUE DE CONFIANCE', 
+      text: <>Je vous <span className="highlight">accompagne</span> à chaque étape de votre projet avec des solutions sur mesure, adaptées à vos objectifs.</>
     }
   ];
 

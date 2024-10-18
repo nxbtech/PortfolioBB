@@ -1,0 +1,78 @@
+.nexabridge-page {
+    display: grid;
+    grid-template-columns: 40% 60%; /* 40% pour la section gauche, 60% pour la section droite */
+    grid-gap: 20px;
+    height: 80vh; /* Hauteur de la page */
+    margin: 2% 5%; /* Marges autour de la page */
+    padding: 20px;
+
+
+    
+    /* Adaptation pour les petits écrans (mobile et tablette) */
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr; /* Les colonnes passent l'une sous l'autre sur mobile */
+      height: auto; /* Hauteur ajustable */
+      padding: 10px;
+    }
+  }
+  
+  .nexabridge-page__left {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    color: white; /* Texte blanc pour un bon contraste */
+
+    
+    /* Pour un style épuré des titres dans le carousel ou collapse */
+    h2, h3 {
+      margin: 0;
+      padding-bottom: 10px;
+      font-size: 1.8rem;
+      text-align: center;
+      color: #fff;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      padding: 15px;
+      h2, h3 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .nexabridge-page__right {
+    position: relative;
+    overflow: hidden;
+    background-color: white; /* Fond blanc ou image de fond */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Placeholder for an image or any content */
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      height: 300px; /* Taille ajustée pour la section image sur mobile */
+    }
+  }

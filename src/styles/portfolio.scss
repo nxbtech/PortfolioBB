@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.portfolio-container {
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grille épurée */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustement flexible */
+  grid-gap: 30px;
+}
+
+/* Carte de projet */
+.portfolio-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff8200; /* Ligne d'accent en bas de l'image */
+  }
+
+  .portfolio-card-body {
+    padding: 20px;
+
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #777;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* Modale minimaliste */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ff8200;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff6a00;
+    }
+  }
+}

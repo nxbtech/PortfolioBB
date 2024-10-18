@@ -5,7 +5,6 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 
-
   &__top {
     display: flex;
     flex-direction: column;
@@ -38,6 +37,13 @@
         }
       }
     }
+  }
+
+  &__quote {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0;
+    font-style: italic;
   }
 
   &__bottom {
